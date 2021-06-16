@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Recognizer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js" integrity="sha512-AQMSn1qO6KN85GOfvH6BWJk46LhlvepblftLHzAv1cdIyTWPBKHX+r+NOXVVw6+XQpeW4LJk/GTmoP48FLvblQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <div class="well well-lg"><h1>Hand Gesture Web App</h1></div>
+        <div class="well well-sm">Discover 4 types of hand gestures which are <hr>
+            <span>&#129304;</span>|<span>&#128078;</span>|<span>&#128077;</span>|<span>&#128076;</span>
+        </div>
+        <br>
+        
+        <div class="panel panel-info main">
+            <div class="panel-heading"><h3>Webcam view</h3></div>
+            <div class="panel-body">
+                <div id="camera"></div>
+                <br>
+                <button class="btn btn-info" onclick="takeSnapshot();">Take Snapshot</button>
+            </div>
+        </div>
+        
+        
+        <div class="panel panel-success main">
+            <div class="panel-heading"><h3>Snapshot for Identifying</h3></div>
+            <div class="panel-body">
+                <div id="output"></div>
+                <br>
+                <button class="btn btn-success" onclick="check();">Identify Image</button>
+            </div>
+        </div>
+        <div id="show"></div>
+    </center>
+    <script src="main.js"></script>
+</body>
+</html>

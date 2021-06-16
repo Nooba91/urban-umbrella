@@ -1,0 +1,17 @@
+body{
+    background: dodgerblue;
+}
+.main{
+    width:350px;
+    box-shadow: 0 0 20px whitesmoke;
+}
+#camera{
+    border:dashed;
+    width:250px;
+    height:250px;
+}
+#output{
+    border:ridge chocolate;
+    width:250px;
+    height:250px;
+}
